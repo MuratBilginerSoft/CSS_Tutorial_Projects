@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Tutorial</title>
+
+    <link rel="stylesheet" type="text/css" href="..//CSS/Main.css">
+
+
+    <!--Bootstrap CDN-->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+
+</head>
+<body>
+    
+    <!-- Bir Web sayfası için uygulanacak CSS kodlarını .css uzantılı bir dosyada yazıp dosyayı link olarak gerekli HTML sayfasında gösterip CSS özelliklerin o HTML'e uygulanması sağlanabilir. Bu CSS kodlamada en makul sistemdir. Tek bir merkezde kodlama yapılır. Ve bakımı kolaydır. Kod okunurluğu iyidir. Bu şekilde yazılmış CSS dosyalara External CSS denir Şimdi bu projemizde CSS diye bir Klasör oluşturduk orada da Main.css dosyamızı oluşturduk. Bu CSS dosyasını bu sayfada kullanabilmek için 
+    
+        Head etiketleri arasına
+
+        <link rel="stylesheet" type="text/css" href="..//CSS/Main.css">
+
+        ifadesi kullanılmalıdır.
+    -->
+
+    <h1>Başlık</h1>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <div> Test Div</div>
+
+
+    <!-- Böylelikle tüm CSS kodları tek sayfa üzerinden yönetebiliriz.-->
+
+    <!-- External CSS dosyasında bir etiketle alakalı bir özellik belirtilmiş olsun. Eğer ben ilgili HTML dökümanında aynı etikete Internal olarak farklı bir değer girersem bunu uygulayacaktır.-->
+
+    <!-- Bir CSS in çalışma şekli External CSS - Internal CSS - Inline CSS şeklindedir. Ne kadar çok özele inersek geçerliliği artar.-->
+
+    <!-- Farklı geliştiriciler tarafından yazılmış binlerce CSS kütüphanesi mevcuttur istersek bunların CDN kodlarını alıp projemize dahil edebiliriz. Örneğin en popüler CSS kütüphanelerinden biri Bootstraptir. Biz sitesine gidip gerekli CSS kütüphanesini bize sağlayacak CDN kodunu edinip yukardaki gibi ekleyebiliriz. Böylelikle BS'ye ait tüm CSS özellikleri kullanabilir. Eğer istersek bootstrap CSS kodlarını kendimiz edinip dosya olarak projemize dahil de edebiliriz. Yine sitesine gidip gerekli indirme işlemleri yapılarak bu dosyalara ulaşılabilmektedir. Node JS kurulu ise npm kodlarıyla indirme işlemi editörünüz yardımıyla yapabilirsiniz. 
+    
+        npm install bootstrap kodunu terminal ekranında çalıştırmanız yeterli olacaktir.
+    
+    -->
+
+    <div class="container-sm">100% wide until small breakpoint</div>
+    <div class="container-md">100% wide until medium breakpoint</div>
+    <div class="container-lg">100% wide until large breakpoint</div>
+    <div class="container-xl">100% wide until extra large breakpoint</div>
+
+
+
+</body>
+</html>
