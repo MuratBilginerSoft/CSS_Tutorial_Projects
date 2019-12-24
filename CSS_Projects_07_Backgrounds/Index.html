@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Tutorial</title>
+
+    <style>
+
+        /* Notlar */
+
+        /*
+           
+        1. Bir alanın arkaplan rengi  background-color: indigo; şeklinde değiştirilebilir. 
+        2. Bir alana arka plan resmi  background-image: url("./Images/171.png"); şeklinde eklenebilir. 
+        3. Eklenen resmin konumu ve tekrarlama durumu repeat özelliği ile belirlenir. 
+        
+        Varsayılan olarak, background-image özelliği görüntüyü hem yatay hem de dikey olarak tekrarlar.
+
+        Bazı görüntüler sadece yatay veya dikey olarak tekrarlanmalıdır, aksi takdirde garip görünecektir:
+
+        4. Resimleri istediğimiz şekilde konumlayabilir. Bunun için  background-position: center; şeklinde kullanılabilir.
+
+        5. background-attachment özelliği ile eklenen resmin sayfa ile beraber kaydırılıp kaydırılmayacağını belirleyebiliriz. 
+
+        6. Kodu kısaltmak için, tek bir özellikteki tüm arka plan özelliklerini belirtmek de mümkündür. Buna steno özellik denir.
+
+        7. Background-Clip özelliği ile arka planının boyama alanını belirtebiliriz.
+
+        border-box Varsayılan değer. Arka plan sınırın arkasına uzanıyor
+        padding-box Arka plan kenarlığın iç kenarına kadar uzanır
+        content-box Arka plan, içerik kutusunun kenarına kadar uzanır
+
+        8. Background-origin resmin konumunu belirler. Border-box - padding-box - content-box özellikleri vardır.
+
+        */
+
+        body{
+
+            margin: 0px;
+            /* background-image: url("./Images/171.png"); */
+        }
+
+        .D1,.D2,.D3, .D4,.D5,.D6,.D7,.D8,.D9{
+
+            height: 300px;
+            border: 1px solid red;
+            border-radius: 30px;
+            margin-top: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        .D1{
+
+            background-color: indigo;
+            background-image: url("./Images/111.png"); /* Bir alanın arka planına resim eklemek için kullanılır */
+            background-repeat: no-repeat; /* Resmi tekrarlamayacaktır. Yatay ve Dikeyde Gerçek Boyutuyla Ne Kadar Yer Kaplıyorsa Öyle Gözükecektir. */
+            background-position: center; /* Resmi ortalayacaktır. */
+            background-attachment: fixed; /* Bu resmi konumunda sabitleyecektir. Yani siz sayfayı kaydırsanızda hep o konumunda gözükecektir. */
+            background-clip: border-box; /* Varsayılan değerdir. İçeriğin tüm alanını boyar. */
+            
+
+        }
+
+        .D2{
+
+            background-color: rgba(120, 30, 67, 0.4);
+            background-image: url("./Images/25.png");
+            background-repeat: repeat-x; /* Resmi sadece X ekseninde tekrarlayacaktır. Yani Yan tarafa doğru tekrarlanır resim. */
+            background-position: right; /*  Sağdan konumlayacaktır */
+            background-attachment: scroll; /* Resmin kaydırlmasını sağlayacaktır. Bu default değerdir. Sayfa kaydırıldıkça resimde ekranda gidecektir. Konumuna gelindiğinde gözükecektir. */
+
+
+
+        }
+
+        .D3{
+
+            background-color: hsla(1, 70%, 20%, 0.7);
+            background-image: url("./Images/4.png");
+            background-repeat: repeat-y; /* Sadece Y ekseninde tekrarlamanızı sağlar. Yani aşağıya doğru. */
+            background-position: left; /* Soldan Konumlayacaktır */
+            background-attachment: local; /* local Arka plan resmi, öğenin içeriğiyle birlikte kaydırılır */
+
+        }
+
+        .D4{
+
+            background-color: rgb(47, 38, 54);
+            background-image: url("./Images/171.png"); /* Bir alanın arka planına resim eklemek için kullanılır */
+            background-repeat: repeat; /* Repeat default özelliktir. X ve Y ekseninde resmi tekrarlar. */
+            background-position: bottom; /* Aşağıdan Konumlayacaktır. */
+
+        }
+
+        .D5{
+
+            background-color: rgba(94, 172, 49, 0.527);
+            background-image: url("./Images/232.png"); /* Bir alanın arka planına resim eklemek için kullanılır */
+            background-repeat: round; /* İle Resim belirlenen alana sığdırılır ve x ve y ekseninde tekrarlanır */
+            background-position: right top; /* Önce Sağdan ve üstten konumlayacaktır */
+
+        }
+
+        .D6{
+
+            background-color: rgba(156, 60, 224, 0.8);
+            background-image: url("./Images/224.png"); /* Bir alanın arka planına resim eklemek için kullanılır */
+            background-repeat: space; /* Arka plan görüntüsü kırpılmadan mümkün olduğunca tekrarlanır. İlk ve son görüntüler öğenin her iki tarafına sabitlenir ve boşluklar görüntüler arasında eşit olarak dağıtılır */
+            background-repeat: initial; /* Default Değerine Ayarlar*/
+            background-repeat: inherit; /* Bir üst ögesinden kalıtım almasını sağlar. */
+            background-repeat: round;
+            background-position: left bottom; /* Soldan ve aşağıdan konumlayacaktır. */
+
+        }
+    
+        .D7{
+
+            background: #ff34aa url("./Images/232.png") round left top; /* Tek satırda halledilebilir. */
+
+        }
+
+        .D8{
+
+            background-color: lawngreen;
+            background-image: url("./Images/171.png");
+            background-size: 50px;
+            color: white;
+            padding: 30px;
+            background-repeat: no-repeat;
+            background-clip: content-box; /* Bu border sınırları içini boyamamızı sağlar. */
+            background-origin: border-box;
+            /* background-origin: content-box; */
+
+        }
+
+        .D9{
+
+            background-color: yellow;
+            background-clip:content-box; /* Sadece içeriğin alanını boyamamızı sağlar. */
+            padding: 30px;
+            background-origin: content-box;
+            
+        }
+
+        .IM1{
+
+            height: 30px;
+            width: 30px;
+
+        }
+    
+    </style>
+
+</head>
+<body>
+
+    <div class="D1">
+
+
+
+    </div>
+
+    <div class="D2">
+
+
+
+    </div>
+
+    <div class="D3">
+
+
+
+    </div>
+
+    <div class="D4">
+
+
+
+    </div>
+
+    <div class="D5">
+
+
+
+    </div>
+
+    <div class="D6">
+
+
+
+    </div>
+
+    <div class="D7">
+
+
+
+    </div>
+
+    <div class="D8">
+
+        <ul>
+            <li> Item 1 </li>
+            <li> Item 2 </li>
+            <li> Item 3 </li>
+            <li> Item 4 </li>
+            <li> Item 5 </li>
+        </ul>
+
+    </div>
+
+    <div class="D9">
+
+        <img class="IM1" src="./Images//171.png">
+
+     <p>
+
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+
+     </p>
+
+    </div>
+
+
+
+    
+    
+</body>
+</html>

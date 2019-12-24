@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Tutorial</title>
+
+    <style>
+    
+    body{
+
+        margin:0px;
+
+    }
+
+    .D1,.D2,.D3,.D4,.D5,.D6,.D7,.D8,.D9,.D10,.D11{
+
+        height: 40px;
+        margin-left: 5px;
+        margin-top: 10px;
+        border-radius: 30px; /* borderın Kenar Keskinliğini Belirler. */
+        border-width: 2px; /* Border'ın kalınlığını belirler. */
+
+    }
+
+    .D1{
+
+        border-style: dashed; /* Aralıklık Uzun Çizgiler */
+
+        /* Border'ın her bir köşesine ayrı bir style uygulanabilir */
+
+        border-top-style: unset;
+        border-bottom-style: dotted;
+        border-right-style: solid;
+        border-left-style: outset;
+
+        border-style: dotted solid; /* Bu top ve bottom'ı dotted yapar kenarları solid */
+
+        /* Border'ın her bir köşesine ayrı bir border ve border kalınlığı uygulanabilir */
+
+        border-width: 5px 2px 1px 30px; /* Top Right Bottom Left Sıralamasıdır. */
+        border-width: medium thin thick medium;
+
+        /* Border'ın her köşesinin rengi ayrı ayrı belirlenebilir. */
+
+        border-color: blueviolet; /* Bütün kenarlara uygulanır. */
+
+        border-color: blueviolet red yellow black; /* Bütün köşelere ayrı renk atadık */
+
+        border-top-color: black;
+        border-bottom-color: chartreuse;
+        border-right-color:darkcyan;
+        border-left-color: darkgoldenrod;
+
+
+       
+
+    }
+
+    .D2{
+        
+        border-style:dotted; /* Noktalar */
+
+        /*  İstersek tek satırda bütün border değerlerini verebiliriz*/
+
+        border: 2px solid red;
+        border-left: 5px dotted blueviolet;
+
+    }
+
+    .D3{
+        
+        border-style:hidden; /* Gizli */
+    }
+
+    .D4{
+        
+        border-style:groove; 
+    }
+
+    .D5{
+        
+        border-style:inset;
+    }
+
+    .D6{
+        
+        border-style:none; /* Border Yok */
+    }
+
+    .D7{
+        
+        border-style:outset;
+    }
+
+    .D8{
+        
+        border-style:ridge;
+    }
+
+    .D9{
+
+        border-style:solid; /* Düz Çizgi Border */
+        
+    }
+
+    .D10{
+
+        border-style:unset;
+        
+    }
+
+    .D11{
+
+        border-style:double; /* Kalın Çizgi Border */
+        
+    }
+
+    
+    
+    </style>
+
+</head>
+<body>
+    
+  <div class="D1"></div>
+  <div class="D2"></div>
+  <div class="D3"></div>
+  <div class="D4"></div>
+  <div class="D5"></div>
+  <div class="D6"></div>
+  <div class="D7"></div>
+  <div class="D8"></div>
+  <div class="D9"></div>
+  <div class="D10"></div>
+  <div class="D11"></div>
+
+
+</body>
+</html>

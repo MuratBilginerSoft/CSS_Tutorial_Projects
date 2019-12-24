@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Tutorial</title>
+
+    <style>
+    
+    /* 1. Normal Color Declare */
+
+    *{
+        text-align: center;
+
+    }
+
+    .P1{
+        color: white;
+        background-color: blueviolet;
+        border: 2px black dashed;
+        border-radius: 30px;
+        height: 30px;
+
+    }
+
+    .P2{
+        color:burlywood;
+        background-color: crimson;
+        border: 2px black dashed;
+        border-radius: 30px;
+        height: 30px;
+    }
+
+    /*  RGB Value */
+
+    /* RGB 0 ile 255 arasında değer alır. Red Green ve Blue değerlerinin 0 ile 255 arasında nasıl karıştırılacağını belirtiriz 
+    
+    Her parametre (kırmızı, yeşil ve mavi) rengin yoğunluğunu 0 ile 255 arasında tanımlar.
+
+    Örneğin, rgb (255, 0, 0) kırmızı olarak görüntülenir, çünkü kırmızı en yüksek değerine (255) ve diğerleri 0'a ayarlanır.
+
+    Rengi siyah olarak görüntülemek için, tüm renk parametreleri şu şekilde ayarlanmalıdır: rgb (0, 0, 0).
+
+    Rengi beyaz olarak görüntülemek için, tüm renk parametreleri şu şekilde ayarlanmalıdır: rgb (255, 255, 255).
+    
+    */
+
+    .P3{
+
+        color: rgb(25, 30, 65)
+
+    }
+
+    /* HEX Value */
+
+    /* #rrggbb şeklinde yazılır. Yine Kırmızı Yeşil Mavi renklerin karışımıdır. Ancak burada harf olarak a dan ff ye kadar sayısal olarakda 0 ile 255 arasında değer alıright: NaNem;
+    
+      ##aa2456 gibi.
+
+      Burada rr (kırmızı), gg (yeşil) ve bb (mavi) 00 ile ff arasındaki onaltılık değerlerdir (ondalık 0-255 ile aynı).
+
+      Örneğin, # ff0000 kırmızı olarak görüntülenir, çünkü kırmızı en yüksek değerine (ff) ve diğerleri en düşük değere (00) ayarlanmıştır.
+    
+    */
+
+    .P4{
+
+        color: #aa2455;
+
+    }
+
+    /* HSL Value */
+
+    /* CSS'de renk, renk tonu, doygunluk ve açıklık (HSL) kullanılarak şu şekilde belirtilebilir: 
+    
+    hsl (ton, doygunluk, hafiflik)
+
+    Ton, renk tekerleğinde 0 ila 360 arasında bir derecedir. 0 kırmızı, 120 yeşil ve 240 mavidir.
+
+    Doygunluk bir yüzde değeridir,% 0 gri bir ton anlamına gelir ve% 100 tam renktir.
+
+    Açıklık da bir yüzde,% 0 siyah,% 50 ne açık ne de karanlık,% 100 beyaz*/
+
+    .P5{
+
+        color: hsl(250, 30%, 40%);
+
+    }
+
+    /* RGBA Value */
+
+    /* RGBA renk değerleri, bir renk için opaklığı belirten alfa kanallı RGB renk değerlerinin bir uzantısıdır.
+
+        Bir RGBA renk değeri aşağıdakilerle belirtilir:
+
+        rgba (kırmızı, yeşil, mavi, alfa)
+
+        Alfa parametresi 0,0 (tamamen şeffaf) ile 1,0 (hiç şeffaf değil) arasında bir sayıdır: */
+
+    .P6{
+
+        background-color: rgba(120, 20, 45, 0.5);
+
+    }
+
+    /* HSLA Value */
+
+    /* HSLA renk değerleri, HSL renk değerlerinin bir alfa kanalı ile bir uzantısıdır - bu bir rengin opaklığını belirtir.
+
+        Bir HSLA renk değeri aşağıdakilerle belirtilir:
+
+        hsla (ton, doygunluk, hafiflik, alfa)
+
+        Alfa parametresi 0,0 (tamamen şeffaf) ile 1,0 (hiç şeffaf değil) arasında bir sayıdır: */
+
+    .P7{
+
+        background-color: hsla(100, 90%, 20%, 0.3);
+
+
+    }
+
+
+
+
+    
+    </style>
+
+</head>
+<body>
+    
+
+    <p class="P1"> Hello World </p>
+
+    <p class="P2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae officiis libero, explicabo natus enim veritatis iste voluptas ipsum dicta debitis totam maxime corrupti, omnis optio unde cum, iusto et nesciunt.</p>
+
+    <p class="P3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae officiis libero, explicabo natus enim veritatis iste voluptas ipsum dicta debitis totam maxime corrupti, omnis optio unde cum, iusto et nesciunt.</p>
+
+    <p class="P4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae officiis libero, explicabo natus enim veritatis iste voluptas ipsum dicta debitis totam maxime corrupti, omnis optio unde cum, iusto et nesciunt.</p>
+
+    <p class="P5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae officiis libero, explicabo natus enim veritatis iste voluptas ipsum dicta debitis totam maxime corrupti, omnis optio unde cum, iusto et nesciunt.</p>
+
+    <p class="P6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae officiis libero, explicabo natus enim veritatis iste voluptas ipsum dicta debitis totam maxime corrupti, omnis optio unde cum, iusto et nesciunt.</p>
+
+    <p class="P7">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae officiis libero, explicabo natus enim veritatis iste voluptas ipsum dicta debitis totam maxime corrupti, omnis optio unde cum, iusto et nesciunt.</p>
+
+    <p class="P8">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae officiis libero, explicabo natus enim veritatis iste voluptas ipsum dicta debitis totam maxime corrupti, omnis optio unde cum, iusto et nesciunt.</p>
+
+
+
+
+
+</body>
+</html>

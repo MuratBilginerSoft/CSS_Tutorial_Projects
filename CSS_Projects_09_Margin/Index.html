@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Tutorial</title>
+
+    <style>
+    
+    /* Margin Bir Nesnenin diğer nesnelere göre konumunu ayarlamak için kullanılır. */
+
+    body{
+        margin: 0px; /*  Eğer sadece margin değerine tek bir değer atarsanız bu bütün kenalardan verilecek boşluğu ifade eder.*/
+    }
+    
+    .D1,.D2,.D3,.D4,.D5{
+        height: 100px;
+        border: thin solid blueviolet;
+        margin-top: 5px;
+    }
+
+    .D1{
+        margin-top: 0px;
+    }
+
+    .D2{
+
+        /* D2 divini üst öğeye göre 10px aşağıdan başlatmak istiyorum  */
+
+        margin-top: 10px;
+
+    }
+
+    .D3{
+
+        /* D3 divinin aşağıdaki öğeden 20px uzaklaştırmak istiyorum*/
+
+        margin-bottom: 20px;
+
+    }
+
+    .D4{
+
+        /* D4 divini soldan 15px uzaklaştırmak istiyorum */
+
+        margin-left: 15px;
+
+        margin: 5px 10px 30px 100px; /* Bu şekilde tek satırdada değerler verilebilir Top - Right - Bottom - Left*/
+
+        margin: 5px 10px 30px; /* Bu da yapılabilir. Top Right Bottom */
+
+        margin: 5px 10px; /* Top ve Bottom 5 Right ve left 10px değer alır */
+
+        /* Margin Collapse özelliği gereği standart olarak div 3 ün bottomdan 20px boşluk olduğu ve div 4 ün top 5px olunca gerçek uzaklığın 25 px olması beklenir. Ama margin özellikleri boşluk değerine göre değil nesneye göre hesaplandığı için aradaki uzaklık 20px olarak kalacaktır. Eğer top 25px olsaydı. O zaman 25px olurdu. */
+
+    }
+
+    .D5{
+        /* D5 divini sağdan 30px uzaklaştırmak istiyorum.*/
+        /*  margin: auto; tarayıcı kenar boşluğunu hesaplar ve uygular Burada bodynin margin değerine verdiğiniz değer auto değeridir.*/
+
+        /* % işareti ile bir değer belirtirsek bu ilgili elementin genişlik boyutunu alır ve yüzdesini hesaplar ona göre boluk bırakır.*/
+
+        margin-right: 30px;
+        margin:auto;
+
+        margin: 10%; /* Burada ilgili elementin boyutunu küçülterek bu alanları açabildiğini unutmayınız*/
+    }
+
+    </style>
+</head>
+<body>
+
+    <div class="D1"></div>
+    <div class="D2"></div>
+    <div class="D3"></div>
+    <div class="D4"></div>
+    <div class="D5"></div>
+
+    
+</body>
+</html>
