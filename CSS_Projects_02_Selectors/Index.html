@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Tutorial</title>
+
+
+    <style>
+    
+    /* 1 Etiket Seçici */
+
+    h1{
+
+        font-size: 40px;
+        border: 1px red dashed;
+        border-radius: 10px;
+        margin-left: 10px;
+        padding-left: 10px;
+        text-align: center;
+    }
+
+    /* 2 Class Seçici */
+
+    .B1{
+
+        font-size: 50px;
+        background-color: blueviolet; 
+        border: 2px dashed black;   
+    }
+    
+    .B2{
+        font-size: 10px;
+        border: 3px solid red;
+        border-radius: 20px;
+
+    }
+
+    /* 3 Etiketin Classını Seçme */
+
+    .C1{
+        border: 2px black dashed;
+        border-radius: 20px;
+    }
+
+    h1.C1{
+
+        font-size: 60px;
+        background-color: blue;
+
+    }
+
+    h2.C2{
+
+        font-size: 20px;
+        background-color: chocolate;
+    }
+
+    /* 4. ID Seçici */
+
+    p{
+
+        margin-top: -20px;
+
+
+
+    }
+
+    .P1{
+
+        border: 5px solid red;
+        border-radius: 40px;
+
+
+    }
+
+    #P1{
+
+        font-size: 100px;
+    }
+
+    /* 5 Classın ID'si seçme*/
+
+    .P1#P1{
+
+        padding: 30px;
+    }
+
+
+    /* 6 Etiketin ID'si Seçme */
+
+    p#P4{
+
+        font-size: 160px;
+
+
+    }
+
+    /* 7 Etiketin Class'ının ID'sini Seçmek */
+
+    p.P3#P4{
+
+        border: 10px black dashed;
+        border-radius: 100px;
+    }
+
+
+    *{
+
+        text-align: right;
+
+    }
+
+    h1,h2,p{
+
+        color: red;
+
+    }
+
+    </style>
+</head>
+<body>
+
+    <!-- CSS kodları istediğimiz HTML bloklarına odaklayabilmek için belli seçme işlemlerimiz vardır. -->
+
+    <!-- 1 Etiket Seçici - Etiket seviyesinde seçim direkt etikerin ismi yazılarak oluşturulur. Etiket seviyesinde erişirseniz seçtiğiniz etiketten kaç tane varsa tamamına uygulanır. Özel olarak bir noktaya odaklanmak etiket seviyesinde olurlu değildir. -->
+
+    <h1> Başlık 1 </h1>
+
+    <h1> Başlık 2</h1>
+
+    <!-- 2 Class Seçici  Bazı etiketlere class değerleri vererek onlara ister tekil olarak istersek grup halinde ulaşabiliriz. Birden fazla etikete aynı class ismi verilebilir. Ve bir class'a ulaşabilmek için .classname{} yöntemi kullanılır. -->
+
+    <!-- Etiket seviyeleri önemlidir. H1 için yazmış olduğunu CSS kodlarını eğer Class seviyesinde değiştirirseniz Class seviyesinde yazdıklarınızı dikkate alınacaktir. Eğer etiket seviyesinde değiştirdiğiniz bir özelliği class ya da id seviyesinde dokunmazsanız etiket seviyesinde verdiğiniz özellik geçerli olacaktır.
+    
+        Aşağıdaki kodlarda h1 için yazılamış özelliklerden bazıları class seviyesinde değiştirilmediği için değişmeyecektir.
+    -->
+
+    <h1 class="B1"> Başlık 1 </h1>
+    <h1 class="B2"> Başlık 2 </h1>
+    <h2 class="B1"> Başlık 3 </h2>
+
+    <!-- 3 Etiketin Classını Seçici - Bazı durumlarda aynı class grubuna sahip birden fazla etiket olabilir ama biz özel olarak sadece bir etiketin classına ulaşmak isteyebiliriz. Böyle durumlarda etiketismi.classismi{} yöntemi kullanılır. -->
+
+    <!-- Aşağıdaki kodlarda h1'in C1'ine farklı özellikler h2'nin C1'ine farklı özellikler vermek istiyoruz ama bazı özellikleri de ortak olsun istiyoruz.-->
+
+    <h1 class="C1"> Başlık 1 </h1>
+    <h1 class="C2"> Başlık 2 </h1>
+    <h2 class="C1"> Başlık 3 </h2>
+
+    <!-- 4 ID Seçici Bir Html etiketini tamamen özelleştirmek ve tekilleştirmek için o etikete özel bir ID değeri verilir. Bir Html dökümanında aynı ID ismi birden fazla etikete verilememelidir. Bu kullanım mantığına aykırı bir davranıştır. Bunun için zaten class sistemi vardır. Bir etikete ID'sinden ulaşmak istersek #IDName{} şeklinde kullanılır. -->
+
+
+    <p class="P1" id="P1"> Paragraf 1</p> <br>
+    <p class="P1" id="P2"> Paragraf 2</p> <br>
+    <p class="P2" id="P3"> Paragraf 3</p> <br>
+    <p class="P3" id="P4"> Paragraf 4</p> <br>
+ 
+
+    <!-- 5 Classın IDsini seçmek için .classname#IDName{} -->
+
+    <!-- 6 Etikerin IDsini seçmek için etikerName#IDName{} -->
+
+    <!-- 7 Etikerin Class'ının IDsini seçmek için etikerName.ClassName#IDName{} -->
+
+    <!-- 8 Bazen Html içindeki bütün etiketleri etkilemesini istediğimi CSS kodları yazmak isteyebiliriz. Bunu *{} ile yapabiliriz. * CSS'i ilk uygulanan etikettir. Özel olarak kodlar diğer seviyelerde değiştirildiyse onlar geçerli olacaktır.-->
+
+    <!-- 9 Bazen bütün html etiketlerine değil ama bir kaç etikete aynı kodları uygulamak gerekebilir. Bunun için örneğin h1,h2,p{} gibi bir group sistemi kullanılabilir.-->
+
+
+
+
+    
+</body>
+</html>
